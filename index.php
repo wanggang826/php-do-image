@@ -13,10 +13,5 @@ for ($i=0;$i<=$count;$i++){
     $Img->makeMergerImg($product_sn);
     $img_arr[$i] = 'upload/pin_code/'.$product_sn.'.png';
 }
-//$Img->makeCodeImg('dev2.lystrong.cn',$product_sn);
-//$Img->makeImgWithStr('upload/sn_str_img/'.$product_sn.'.jpg',$product_sn);
-//$Img->CompositeImage(['upload/product_qr_code/'.$product_sn.'.jpg','upload/sn_str_img/'.$product_sn.'.jpg'],'upload/pin_code/'.$product_sn.'.png');
-//unlink('upload/sn_str_img/'.$product_sn.'.jpg');
-//unlink('upload/product_qr_code/'.$product_sn.'.jpg');
 $Img->makeZip('upload/pin_code-0007.zip',$img_arr);
 $Img->download('upload/pin_code-0007.zip');
